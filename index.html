@@ -10,7 +10,7 @@
 <body>
     <main class="container">
         <header>
-            <h1>Todo List</h1>
+            <h1>Todo List with Pomodoro Timer</h1>
         </header>
         <section class="input-section">
             <input type="text" id="new-task" placeholder="Add new task">
@@ -22,6 +22,21 @@
             <button id="show-completed" class="filter-btn">Completed</button>
         </section>
         <ul id="tasks"></ul>
+
+        <!-- Seção Pomodoro -->
+        <section class="pomodoro-section">
+            <h2>Pomodoro Timer</h2>
+            <div id="timer">
+                <span id="minutes">25</span>:<span id="seconds">00</span>
+            </div>
+            <div class="pomodoro-controls">
+                <button id="start-timer">Start</button>
+                <button id="pause-timer">Pause</button>
+                <button id="reset-timer">Reset</button>
+            </div>
+            <p id="pomodoro-state">Focus Mode</p>
+        </section>
+
         <footer>
             <p id="task-count">0 tasks remaining</p>
         </footer>
