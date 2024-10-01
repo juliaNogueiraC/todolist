@@ -5,7 +5,7 @@
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Arial, sans-serif;
     background-color: #f0f0f0;
     display: flex;
     justify-content: center;
@@ -16,17 +16,20 @@ body {
 .container {
     background-color: white;
     padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 300px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
     text-align: center;
+    margin: 20px;
 }
 
 h1 {
     margin-bottom: 20px;
+    color: #333;
 }
 
-.input-section {
+.input-section, .filter-section {
     margin-bottom: 20px;
 }
 
@@ -34,6 +37,8 @@ h1 {
     width: 70%;
     padding: 10px;
     font-size: 16px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
 }
 
 #add-task {
@@ -42,11 +47,27 @@ h1 {
     background-color: #5cb85c;
     color: white;
     border: none;
+    border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 #add-task:hover {
     background-color: #4cae4c;
+}
+
+.filter-btn {
+    background-color: #eee;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 5px;
+}
+
+.filter-btn.active {
+    background-color: #5bc0de;
+    color: white;
 }
 
 ul {
@@ -62,6 +83,7 @@ li {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    transition: background-color 0.3s ease;
 }
 
 button {
@@ -69,6 +91,8 @@ button {
     padding: 5px;
     border: none;
     cursor: pointer;
+    border-radius: 3px;
+    transition: background-color 0.3s ease;
 }
 
 .complete {
@@ -81,7 +105,20 @@ button {
     color: white;
 }
 
-.completed {
+li.completed {
     text-decoration: line-through;
     opacity: 0.6;
+    background-color: #f0f0f0;
+}
+
+li.completed .complete {
+    display: none;
+}
+
+footer {
+    margin-top: 20px;
+}
+
+#task-count {
+    color: #777;
 }
